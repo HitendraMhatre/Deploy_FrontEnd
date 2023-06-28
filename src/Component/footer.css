@@ -1,6 +1,0 @@
-canvas {
-    overflow-clip-margin: content-box;
-    overflow: clip;
-    overflow-x:5;
-    overflow-y:3; 
-}
