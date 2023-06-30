@@ -36,7 +36,7 @@ export default function AddSelected() {
   const handleSubmit = (e) => {
     e.preventDefault();
     let data = JSON.stringify(category);
-    fetch(`http://localhost:8080/${url}`, {
+    fetch(`http://localhost:8080/admins/${url}`, {
       method: "POST",
       headers: { "Content-type": "application/json" },
       body: data,
