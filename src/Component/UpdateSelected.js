@@ -8,7 +8,7 @@ export default function UpdateSelected() {
   const [category, setCategory] = useState({});
 
   useEffect(() => {
-    const apiUrl = `http://localhoost:8080/admins/${url}/${code}`;
+    const apiUrl = `http://localhost:8080/admins/${url}/${code}`;
 
     fetch(apiUrl)
       .then((response) => response.json())
@@ -38,7 +38,7 @@ export default function UpdateSelected() {
   const handleSubmit = (e) => {
     e.preventDefault();
     let data = JSON.stringify(category);
-    fetch(`http://localhoost:8080/admins/${url}/${code}`, {
+    fetch(`http://localhost:8080/admins/${url}/${code}`, {
       method: "PUT",
       headers: { "Content-type": "application/json" },
       body: data,
