@@ -8,7 +8,7 @@ export default function AddSelected() {
   const [category, setCategory] = useState({});
 
   useEffect(() => {
-    const apiUrl = `http://localhoost:8080/admins/${url}/1`;
+    const apiUrl = `http://localhost:8080/admins/${url}/1`;
 
     fetch(apiUrl)
       .then((response) => response.json())
