@@ -9,7 +9,7 @@ export default function DeleteSelected() {
   const [record, setRecord] = useState({});
 
   useEffect(() => {
-    const apiUrl = `http://localhost:8080/admins/${url}/${code}`;
+    const apiUrl = `http://onestop-be-hitendra7-dev.apps.sandbox-m4.g2pi.p1.openshiftapps.com/admins/${url}/${code}`;
     console.log(apiUrl);
     fetch(apiUrl)
       .then((response) => response.json())
@@ -24,7 +24,7 @@ export default function DeleteSelected() {
     if (!confirmed) {
       return;
     }
-    const res = await fetch(`http://localhost:8080/admins/${url}/${code}`, {
+    const res = await fetch(`http://onestop-be-hitendra7-dev.apps.sandbox-m4.g2pi.p1.openshiftapps.com/admins/${url}/${code}`, {
       method: "DELETE",
     })
       .then((res) => {

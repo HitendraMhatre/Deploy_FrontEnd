@@ -8,7 +8,7 @@ export default function AddSelected() {
   const [category, setCategory] = useState({});
 
   useEffect(() => {
-    const apiUrl = `http://localhost:8080/admins/${url}/1`;
+    const apiUrl = `http://onestop-be-hitendra7-dev.apps.sandbox-m4.g2pi.p1.openshiftapps.com/admins/${url}/1`;
 
     fetch(apiUrl)
       .then((response) => response.json())
@@ -36,7 +36,7 @@ export default function AddSelected() {
   const handleSubmit = (e) => {
     e.preventDefault();
     let data = JSON.stringify(category);
-    fetch(`http://localhost:8080/admins/${url}`, {
+    fetch(`http://onestop-be-hitendra7-dev.apps.sandbox-m4.g2pi.p1.openshiftapps.com/admins/${url}`, {
       method: "POST",
       headers: { "Content-type": "application/json" },
       body: data,

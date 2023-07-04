@@ -16,7 +16,7 @@ export default function Search() {
     const { value } = event.target;
     setSearchTerm(value);
 
-    fetch(`http://localhost:8080/api/search/${value}`)
+    fetch(`http://onestop-be-hitendra7-dev.apps.sandbox-m4.g2pi.p1.openshiftapps.com/api/search/${value}`)
       .then((result) => result.json())
       .then((result) => {
         setData(result);

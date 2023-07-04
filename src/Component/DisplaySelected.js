@@ -8,7 +8,7 @@ export default function DisplaySelected() {
   const navigate = useNavigate();
 
   useEffect(() => {
-    const apiUrl = `http://localhost:8080/admins/${url}/${code}`;
+    const apiUrl = `http://onestop-be-hitendra7-dev.apps.sandbox-m4.g2pi.p1.openshiftapps.com/admins/${url}/${code}`;
 
     fetch(apiUrl)
       .then((response) => response.json())

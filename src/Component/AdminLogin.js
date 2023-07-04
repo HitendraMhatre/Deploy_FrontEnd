@@ -22,7 +22,7 @@ export default function CardForm() {
 
     if (!localStorage.getItem('email')) { // Corrected typo: changed `isLoggedIn` to `loggedIn`
       try {
-        const response = await fetch("http://localhost:8080/admins/login", {
+        const response = await fetch("http://onestop-be-hitendra7-dev.apps.sandbox-m4.g2pi.p1.openshiftapps.com/admins/login", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",

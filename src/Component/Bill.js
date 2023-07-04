@@ -22,7 +22,7 @@ export default function Bill() {
   }, []);
 
   const fetchBillingData = () => {
-    fetch(`http://localhost:8080/bill/${email_id}`)
+    fetch(`http://onestop-be-hitendra7-dev.apps.sandbox-m4.g2pi.p1.openshiftapps.com/bill/${email_id}`)
       .then((response) => response.json())
       .then((data) => {
         setBillingData(data);
@@ -51,7 +51,7 @@ export default function Bill() {
       cart_Id_fk: cartid,
     };
 
-    fetch(`http://localhost:8080/api/addorders/${cartid}`, {
+    fetch(`http://onestop-be-hitendra7-dev.apps.sandbox-m4.g2pi.p1.openshiftapps.com/api/addorders/${cartid}`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

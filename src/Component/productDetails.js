@@ -26,7 +26,7 @@ function ProductDetails() {
 
   useEffect(() => {
     // Fetch product details by ID
-    fetch(`http://localhost:8080/api/productsById/${p_Id}`)
+    fetch(`http://onestop-be-hitendra7-dev.apps.sandbox-m4.g2pi.p1.openshiftapps.com/api/productsById/${p_Id}`)
       .then((res) => res.json())
       .then((data) => {
         setProduct(data);
@@ -39,7 +39,7 @@ function ProductDetails() {
       })
       .catch((err) => console.log(err));
 
-    fetch(`http://localhost:8080/api/productDetailsById/${p_Id}`)
+    fetch(`http://onestop-be-hitendra7-dev.apps.sandbox-m4.g2pi.p1.openshiftapps.com/api/productDetailsById/${p_Id}`)
       .then((res) => res.json())
       .then((data) => {
         setProductDetails(data.p_Description);
@@ -47,7 +47,7 @@ function ProductDetails() {
       })
       .catch((err) => console.log(err));
 
-    fetch(`http://localhost:8080/api/getbyemail/${email_id}`)
+    fetch(`http://onestop-be-hitendra7-dev.apps.sandbox-m4.g2pi.p1.openshiftapps.com/api/getbyemail/${email_id}`)
       .then((res) => res.json())
       .then((data) => {
         setCustomer(data[0].customer_Id);
@@ -101,7 +101,7 @@ function ProductDetails() {
       if (productDetails) {
 
         // Send a POST request to the API endpoint
-        fetch('http://localhost:8080/api/add', {
+        fetch('http://onestop-be-hitendra7-dev.apps.sandbox-m4.g2pi.p1.openshiftapps.com/api/add', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',

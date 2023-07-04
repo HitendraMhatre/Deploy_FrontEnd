@@ -11,7 +11,7 @@ export default function Home() {
 
   const navigate = useNavigate();
   useEffect(() => {
-    fetch("http://localhost:8080/api/Categories")
+    fetch("http://onestop-be-hitendra7-dev.apps.sandbox-m4.g2pi.p1.openshiftapps.com/api/Categories")
       .then((res) => res.json())
       .then((result) => {
         setCategory(result);

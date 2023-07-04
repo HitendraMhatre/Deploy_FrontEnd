@@ -14,7 +14,7 @@ export default function Profile() {
   }, []); // Empty dependency array to run only once
 
   const handlePro = () => {
-    fetch(`http://localhost:8080/api/getbyemail/${email_id}`)
+    fetch(`http://onestop-be-hitendra7-dev.apps.sandbox-m4.g2pi.p1.openshiftapps.com/api/getbyemail/${email_id}`)
       .then((res) => res.json())
       .then((data) => {
         setCustomer(data[0]);

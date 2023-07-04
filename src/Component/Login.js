@@ -17,7 +17,7 @@ export default function CardForm() {
 
     if (!localStorage.getItem('email')) {
       try {
-        const response = await fetch("http://localhost:8080/login/customer", {
+        const response = await fetch("http://onestop-be-hitendra7-dev.apps.sandbox-m4.g2pi.p1.openshiftapps.com/login/customer", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",

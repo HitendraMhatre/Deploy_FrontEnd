@@ -39,7 +39,7 @@ export default function Payment() {
       //   console.log("data is the");
       //   console.log(data);
     
-      //   fetch(`http://localhost:8080/api/addorders/${cartid}`, {
+      //   fetch(`http://onestop-be-hitendra7-dev.apps.sandbox-m4.g2pi.p1.openshiftapps.com/api/addorders/${cartid}`, {
       //     method: 'POST',
       //     headers: {
       //       'Content-Type': 'application/json',

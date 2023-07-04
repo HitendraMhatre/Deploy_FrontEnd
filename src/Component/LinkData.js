@@ -26,7 +26,7 @@ export function LinkData() {
   };
 
   const fetchData = async (url) => {
-    const response = await fetch(`http://localhost:8080/admins/${url}`);
+    const response = await fetch(`http://onestop-be-hitendra7-dev.apps.sandbox-m4.g2pi.p1.openshiftapps.com/admins/${url}`);
     const result = await response.json();
     setData(result);
   };

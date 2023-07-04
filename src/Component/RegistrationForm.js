@@ -117,7 +117,7 @@ const RegistrationForm = () => {
 
   if (validateForm()) {
     try {
-      const response = await fetch(`http://localhost:8080/api/customer/${email_id}`, {
+      const response = await fetch(`http://onestop-be-hitendra7-dev.apps.sandbox-m4.g2pi.p1.openshiftapps.com/api/customer/${email_id}`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

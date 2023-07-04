@@ -148,7 +148,7 @@ export default function Productsbycat() {
   const navigate=useNavigate();
   console.log(code + "------------------------------------------")
   useEffect(() => {
-      fetch("http://localhost:8080/api/productsByCat/" + code).then(res => res.json())
+      fetch("http://onestop-be-hitendra7-dev.apps.sandbox-m4.g2pi.p1.openshiftapps.com/api/productsByCat/" + code).then(res => res.json())
           .then(result => {
               setProducts(result);
               console.log(result);

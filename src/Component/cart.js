@@ -9,7 +9,7 @@ export default function Cart() {
   const navigate = useNavigate();
   const [cartid,setCartid]= useState(0);
   useEffect(() => {
-    fetch(`http://localhost:8080/api/getbyemail/${email_id}`)
+    fetch(`http://onestop-be-hitendra7-dev.apps.sandbox-m4.g2pi.p1.openshiftapps.com/api/getbyemail/${email_id}`)
       .then((res) => res.json())
       .then((data) => {
         setCustomer(data[0].customer_Id);
@@ -20,7 +20,7 @@ export default function Cart() {
 
   useEffect(() => {
     if (customer) {
-      fetch(`http://localhost:8080/api/get/${customer}`)
+      fetch(`http://onestop-be-hitendra7-dev.apps.sandbox-m4.g2pi.p1.openshiftapps.com/api/get/${customer}`)
         .then((res) => res.json())
         .then((result) => {
           setData(result);
@@ -54,7 +54,7 @@ export default function Cart() {
   };
 
   const handleDelete = (cartId) => {
-    fetch(`http://localhost:8080/api/deleteCart/${cartId}`, {
+    fetch(`http://onestop-be-hitendra7-dev.apps.sandbox-m4.g2pi.p1.openshiftapps.com/api/deleteCart/${cartId}`, {
       method: 'DELETE',
     })
       .then((res) => res.json())

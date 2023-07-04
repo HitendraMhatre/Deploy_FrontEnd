@@ -34,7 +34,7 @@ export default function BUyNowBill() {
         }
       };
   
-      return fetch(`http://localhost:8080/api/addorders/${id}`, {
+      return fetch(`http://onestop-be-hitendra7-dev.apps.sandbox-m4.g2pi.p1.openshiftapps.com/api/addorders/${id}`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -63,7 +63,7 @@ export default function BUyNowBill() {
   }, []);
 
   const fetchBillingData = () => {
-    fetch(`http://localhost:8080/api/productdetails/${p_Id}`)
+    fetch(`http://onestop-be-hitendra7-dev.apps.sandbox-m4.g2pi.p1.openshiftapps.com/api/productdetails/${p_Id}`)
       .then((response) => response.json())
       .then((data) => {
         setBillingData(data);

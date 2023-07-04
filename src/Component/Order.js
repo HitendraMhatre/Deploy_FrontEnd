@@ -11,7 +11,7 @@ export default function OrderDetails2() {
   const navigate = useNavigate();
   const [cartid,setCartid]= useState(0);
   useEffect(() => {
-    fetch(`http://localhost:8080/api/getbyemail/${email_id}`)
+    fetch(`http://onestop-be-hitendra7-dev.apps.sandbox-m4.g2pi.p1.openshiftapps.com/api/getbyemail/${email_id}`)
       .then((res) => res.json())
       .then((data) => {
         setCustomer(data[0]);
@@ -27,7 +27,7 @@ export default function OrderDetails2() {
 
   useEffect(() => {
     if (customer) {
-      fetch(`http://localhost:8080/api/orders/${custid
+      fetch(`http://onestop-be-hitendra7-dev.apps.sandbox-m4.g2pi.p1.openshiftapps.com/api/orders/${custid
     }`)
         .then((res) => res.json())
         .then((result) => {

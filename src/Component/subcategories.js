@@ -53,7 +53,7 @@ export default function Subcategory() {
     const navigate = useNavigate();
     console.log(code + "------------------------------------------")
     useEffect(() => {
-        fetch("http://localhost:8080/api/subcategories/" + code).then(res => res.json())
+        fetch("http://onestop-be-hitendra7-dev.apps.sandbox-m4.g2pi.p1.openshiftapps.com/api/subcategories/" + code).then(res => res.json())
             .then(result => {
                 setCategory(result);
                 console.log(result)

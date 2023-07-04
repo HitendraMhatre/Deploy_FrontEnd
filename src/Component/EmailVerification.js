@@ -42,7 +42,7 @@ console.log(otp);
     console.log(randomNumber)
     if (otp === randomNumber) {
       try {
-        const response = await fetch(`http://localhost:8080/api/addcustme`, {
+        const response = await fetch(`http://onestop-be-hitendra7-dev.apps.sandbox-m4.g2pi.p1.openshiftapps.com/api/addcustme`, {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
