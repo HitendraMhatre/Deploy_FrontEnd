@@ -4,8 +4,8 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                sh 'oc new-build --name=onestop-fe:latest --binary --strategy=docker'
-                sh 'oc start-build onestop-fe:latest --from-dir=. --follow'
+                sh 'oc new-build --name=onestop-fe --binary --strategy=docker'
+                sh 'oc start-build onestop-fe --from-dir=. --follow'
 
             }
         }
