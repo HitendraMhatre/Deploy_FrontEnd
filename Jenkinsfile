@@ -4,13 +4,16 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                sh 'oc build -t onestop_fe .'
+                sh 'oc new-build --name=onestop-fe --binary --strategy=docker'
+                sh 'oc start-build onestop-fe --from-dir=. --follow'
+
             }
         }
         stage('Deploy') {
             steps {
-                sh 'oc rm -f onestop_fe_cont || true'
-                sh 'oc run -d --name onestop_fe_cont -p 3000:3000 --network onestop_jenkins onestop_fe'
+                sh 'oc delete all -l app=onestop-fe'
+                sh 'oc new-app --image-stream=onestop-fe --name=onestop-fe'
+                sh 'oc expose svc/onestop-fe --port=3000'
             }
         }
     }
