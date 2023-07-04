@@ -13,7 +13,7 @@ ENV key=value
 
 RUN npm install --f
 
-RUN npm install -f react-responsive-carousel mdb-react-ui-kit react-toastify @emotion/styled react-otp-input
+RUN npm install --f react-responsive-carousel mdb-react-ui-kit react-toastify @emotion/styled react-otp-input
 
 RUN npm install -g npm
 
