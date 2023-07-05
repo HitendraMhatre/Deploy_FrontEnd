@@ -13,7 +13,7 @@ pipeline {
             steps {
                 sh 'oc delete all -l app=onestop-be'
                 sh 'oc new-app --image-stream=onestop-be --name=onestop-be'
-                sh 'oc expose svc/onestop-be --port=9090'
+                sh 'oc expose svc/onestop-be --port=8080'
             }
         }
     }
